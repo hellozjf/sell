@@ -1,0 +1,7 @@
+#logging:
+#    level:
+#        com.imooc.sell: debug
+#    pattern:
+#        console: "%d - %msg%n"
+#    path: D:\zjf\project\慕课网\SpringBoot打造微信点餐系统\tmp
+#    file: D:\zjf\project\慕课网\SpringBoot打造微信点餐系统\tmp\sell.log
