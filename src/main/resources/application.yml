@@ -1,7 +1,13 @@
-#logging:
-#    level:
-#        com.imooc.sell: debug
-#    pattern:
-#        console: "%d - %msg%n"
-#    path: D:\zjf\project\慕课网\SpringBoot打造微信点餐系统\tmp
-#    file: D:\zjf\project\慕课网\SpringBoot打造微信点餐系统\tmp\sell.log
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.3.30/sell?characterEncoding=utf-8&userSSL=false
+  jpa:
+    show-sql: true
+logging:
+  level:
+    com.imooc: debug
+server:
+  context-path: /sell
