@@ -6,6 +6,8 @@ spring:
     url: jdbc:mysql://192.168.3.30/sell?characterEncoding=utf-8&userSSL=false
   jpa:
     show-sql: true
+  jackson:
+    default-property-inclusion: non_null
 logging:
   level:
     com.imooc: debug
