@@ -5,18 +5,18 @@ spring:
     password: 123456
     url: jdbc:mysql://192.168.3.30/sell?characterEncoding=utf-8&userSSL=false
   jpa:
-    show-sql: true
+    show-sql: false
   jackson:
     default-property-inclusion: non_null
 logging:
   level:
     com.imooc: debug
-server:
-  context-path: /sell
+#server:
+#  context-path: /sell
 wechat:
-  mpAppId: wx3dab51bc315e57a4
-  mpAppSecret: 21ce7adb5282c78b4c98b3e67a0ed6b3
-  mchId:
-  mchKey:
-  keyPath: /var/weixin_cert/h5.p12
-  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+  mpAppId: wxd898fcb01713c658
+  mpAppSecret: xxx
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  keyPath: C:\zjf\code\github\sell\src\main\resources\h5.p12
+  notifyUrl: http://hellozjf.natapp1.cc/notify
