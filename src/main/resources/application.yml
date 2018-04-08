@@ -8,15 +8,30 @@ spring:
     show-sql: false
   jackson:
     default-property-inclusion: non_null
+  redis:
+    host: 192.168.3.30
+    port: 6379
+    password:
 logging:
   level:
     com.imooc: debug
 #server:
 #  context-path: /sell
 wechat:
-  mpAppId: wxd898fcb01713c658
-  mpAppSecret: xxx
+  mpAppId: wx3dab51bc315e57a4   # 微信的测试账号
+  mpAppSecret: 21ce7adb5282c78b4c98b3e67a0ed6b3
+#  mpAppId: wxd898fcb01713c658    # 廖师兄的测试账号
+#  mpAppSecret:
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
   mchId: 1483469312
   mchKey: C5245D70627C1F8E9964D494B0735025
   keyPath: C:\zjf\code\github\sell\src\main\resources\h5.p12
   notifyUrl: http://hellozjf.natapp1.cc/notify
+  templateId:
+    orderStatus: twuYMFCOVxhWX-7Tvc-PZwawn8H5s1e2ELsXRwxH-6w
+
+projectUrl:
+  wechatMpAuthorize: http://hellozjf.natapp1.cc
+  wechatOpenAuthorize: http://hellozjf.natapp1.cc
+  sell: http://hellozjf.natapp1.cc
