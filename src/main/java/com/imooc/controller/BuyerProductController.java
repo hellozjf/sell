@@ -10,8 +10,10 @@ import com.imooc.vo.ProductVO;
 import com.imooc.vo.ResultVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -33,8 +35,14 @@ public class BuyerProductController {
     @Autowired
     private CategoryService categoryService;
 
+    /**
+     * @Cacheable注解，key,condition,unless是SpEL表达式，condition是满足条件就缓存，unless是满足条件就不缓存
+     * @param sellerId
+     * @return
+     */
     @GetMapping("/list")
-    public ResultVO list() {
+//    @Cacheable(cacheNames = "product", key = "#sellerId", condition = "#sellerId.length() > 3", unless = "#result.getCode() != 0")
+    public ResultVO list(@RequestParam(name = "sellerId", required = false) String sellerId) {
 
         // 1. 查询所有的上架商品
         List<ProductInfo> productInfoList = productService.findUpAll();
